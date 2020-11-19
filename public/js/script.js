@@ -8,6 +8,7 @@ const play = function() {
 
   mySelection.innerHTML = translator(myResponse);
   compSelection.innerHTML = translator(compResponse);
+  winner.innerHTML = translator(processWinner(myResponse, compResponse));
 }
 
 const computerSelectionGenerator = function() {
@@ -16,7 +17,9 @@ const computerSelectionGenerator = function() {
 
 const translator = function(input) {
   input = parseInt(input);
-  if (input === 1) {
+  if (input === 0) {
+    return 'Draw';
+  } else if (input === 1) {
     return 'Rock';
   } else if (input === 2) {
     return 'Paper';
@@ -24,5 +27,25 @@ const translator = function(input) {
     return 'Scissors';
   } else {
     return 'Could not understand response';
+  }
+}
+
+const processWinner = function(myResp, compResp) {
+  const diff = Math.abs(myResp - compResp);
+
+  if (diff === 1) {
+    if (myResp > compResp) {
+       return myResp;
+    } else {
+      return compResp;
+    }
+  } else if (diff > 1) {
+    if (myResp < compResp) {
+      return myResp;
+    } else {
+      return compResp;
+    }
+  } else if (diff === 0) {
+    return 0
   }
 }

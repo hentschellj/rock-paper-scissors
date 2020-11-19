@@ -1,0 +1,26 @@
+{
+  "name": "rock-paper-scissors",
+  "version": "1.0.0",
+  "description": "Rock, Paper, Scissors game made with JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hentschellj/rock-paper-scissors.git"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "Jack Hentschell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hentschellj/rock-paper-scissors/issues"
+  },
+  "homepage": "https://github.com/hentschellj/rock-paper-scissors#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  }
+}
